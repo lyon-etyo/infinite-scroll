@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 /* base styles */
 body {
   background: #eee;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   color: #444;
   max-width: 960px;
   margin: 100px auto;
@@ -26,14 +26,71 @@ nav a {
 form {
   max-width: 500px;
 }
-input, textarea {
+input,
+textarea {
   display: block;
   margin: 16px 0;
   padding: 6px 10px;
   width: 100%;
   border: 1px solid #ddd;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 textarea {
-  min-height:200px;
+  min-height: 200px;
+}
+
+.blogs {
+  max-height: 80vh;
+  box-sizing: border-box;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.blogs::-webkit-scrollbar {
+  display: none;
+}
+
+.loader-container {
+  display: none;
+}
+
+.is-loading {
+  display: flex;
+  justify-content: center;
+}
+
+/* Spinner */
+.spinner-1 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+/* Spinner-1 */
+.spinner-1 div {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top: 0.4em solid #36cca2;
+  border-radius: 50%;
+}
+
+.is-loading .spinner-1 div {
+  animation: spinner 1.2s linear infinite both;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+    border-width: 0.1em;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5;
+  }
 }
