@@ -89,6 +89,12 @@
       "body": "Lorem ipsum dolor",
       "likes": "0",
       "id": 15
+    },
+    {
+      "title": "How to design responsive layout",
+      "body": "Design responsive layout, lorem ipsum dolor",
+      "likes": "0",
+      "id": 16
     }
   ]
 }

@@ -40,10 +40,7 @@ textarea {
 }
 
 .blogs {
-  max-height: 80vh;
   box-sizing: border-box;
-  overflow: auto;
-  scrollbar-width: none;
 }
 
 .blogs::-webkit-scrollbar {
@@ -51,12 +48,12 @@ textarea {
 }
 
 .loader-container {
-  display: none;
-}
-
-.is-loading {
   display: flex;
   justify-content: center;
+}
+
+.spinner-1 {
+  display: none;
 }
 
 /* Spinner */
@@ -75,7 +72,11 @@ textarea {
   border-radius: 50%;
 }
 
-.is-loading .spinner-1 div {
+.spinner-1.spinner-1.is-loading {
+  display: block;
+}
+
+.spinner-1.is-loading div {
   animation: spinner 1.2s linear infinite both;
 }
 
